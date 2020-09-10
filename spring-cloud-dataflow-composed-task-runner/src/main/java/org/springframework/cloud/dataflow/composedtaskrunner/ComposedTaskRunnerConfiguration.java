@@ -18,6 +18,8 @@ package org.springframework.cloud.dataflow.composedtaskrunner;
 
 import javax.sql.DataSource;
 
+import io.pivotal.cfenv.core.CfEnv;
+
 import org.springframework.batch.core.StepExecutionListener;
 import org.springframework.batch.core.configuration.annotation.BatchConfigurer;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -48,6 +50,11 @@ public class ComposedTaskRunnerConfiguration {
 
 	@Autowired
 	private ComposedTaskProperties properties;
+
+	@Bean
+	public CfEnv cfEnv() {
+		return new CfEnv();
+	}
 
 	@Bean
 	public StepExecutionListener composedTaskStepExecutionListener(TaskExplorer taskExplorer){
