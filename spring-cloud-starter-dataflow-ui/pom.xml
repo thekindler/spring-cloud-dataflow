@@ -12,7 +12,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-dataflow-ui</artifactId>
+			<artifactId>spring-cloud-dataflow-ui-custom</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 </project>
